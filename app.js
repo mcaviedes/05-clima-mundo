@@ -1,3 +1,5 @@
+const lugar = require("./lugar/lugar.js");
+
 const argv = require("yargs").options({
   direccion: {
     alias: "d",
@@ -6,4 +8,6 @@ const argv = require("yargs").options({
   }
 }).argv;
 
-console.log(argv.direccion);
+lugar.getLugarLatLng(argv.direccion).then(console.log);
+//console.log(argv.direccion);
+//argv.direccion
